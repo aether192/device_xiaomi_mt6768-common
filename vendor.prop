@@ -364,6 +364,7 @@ persist.log.tag.PhoneConfigurationSettings=S
 ro.vendor.mtk_data_config=1
 vendor.mtk.vdec.waitkeyframeforplay=9
 ro.vendor.mtk_embms_support=1
+debug.sf.enable_hwc_vds=0
 debug.sf.disable_backpressure=1
 persist.log.tag.libPowerHal=S
 persist.log.tag.GED=S
