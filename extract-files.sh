@@ -50,6 +50,10 @@ while [ "${#}" -gt 0 ]; do
         lib/libsink.so)
             patchelf --add-needed "libshim_vtservice.so" "${2}"
             ;;
+# For DT2W, mtkpower needs to be part of the input group
+        vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc)
+            echo "$(cat ${2}) input" > "${2}"
+            ;;
     esac
     shift
 done
