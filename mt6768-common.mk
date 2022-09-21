@@ -275,7 +275,6 @@ PRODUCT_COPY_FILES += \
 
 # IMS
 PRODUCT_BOOT_JARS += \
-    ImsServiceBase \
     mediatek-common \
     mediatek-framework \
     mediatek-ims-base \
@@ -285,7 +284,7 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-common
 
 PRODUCT_PACKAGES += \
-    ImsServiceBase
+    libshim_vtservice
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml

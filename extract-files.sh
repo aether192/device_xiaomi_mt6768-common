@@ -45,6 +45,11 @@ while [ "${#}" -gt 0 ]; do
         * )
                 SRC="${1}"
                 ;;
+
+# Add our shim to libsink.so
+        lib/libsink.so)
+            patchelf --add-needed "libshim_vtservice.so" "${2}"
+            ;;
     esac
     shift
 done
