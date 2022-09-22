@@ -17,6 +17,9 @@
 # Light
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.mt6768      u:object_r:hal_light_default_exec:s0
 
+# To toggle DT2W state
+/sys/touchpanel/double_tap u:object_r:sysfs_dt2w:s0
+
 # USB
 /vendor/bin/hw/android\.hardware\.usb@1\.1-service\.mt6768      u:object_r:hal_usb_impl_exec:s0
 

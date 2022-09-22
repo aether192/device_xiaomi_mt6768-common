@@ -1,0 +1,14 @@
+typeattribute hal_power_default mlstrustedsubject;
+
+allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+allow hal_power_default cgroup:file r_file_perms;
+
+# Set scheduling info for apps (for adpf)
+allow hal_power_default appdomain:process { getsched setsched };
+allow hal_power_default self:capability sys_nice;
+
+# Set scheduling info for system_server (for adpf)
+allow hal_power_default system_server:process setsched;
+
+# Set DT2W state
+allow hal_power_default sysfs_dt2w:file rw_file_perms;
