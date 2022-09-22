@@ -1,5 +1,4 @@
 #include <media/AudioTrack.h>
-#include <mediautils/ServiceUtilities.h>
 
 using namespace android;
 
