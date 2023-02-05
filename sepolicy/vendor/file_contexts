@@ -17,6 +17,15 @@
 # Light
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.mt6768      u:object_r:hal_light_default_exec:s0
 
+# To access cpu and gpu freq
+/sys/devices/system/cpu/cpufreq/mtk/.cluster_(min|max)_freq u:object_r:sysfs_mtk_cpufreq:s0
+/sys/kernel/gpu/gpu_(min|max)_clock u:object_r:sysfs_mtk_gpufreq:s0
+
+#libperf
+/vendor/bin/hw/android\.hardware\.power-service\.xiaomi-libperfmgr                 u:object_r:hal_power_default_exec:s0
+
+/dev/cpu_dma_latency                                                              u:object_r:latency_device:s0
+
 # To toggle DT2W state
 /sys/touchpanel/double_tap u:object_r:sysfs_dt2w:s0
 

@@ -3,12 +3,40 @@ typeattribute hal_power_default mlstrustedsubject;
 allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
 allow hal_power_default cgroup:file r_file_perms;
 
+# To get/set powerhal state property
+set_prop(hal_power_default, vendor_power_prop)
+
 # Set scheduling info for apps (for adpf)
 allow hal_power_default appdomain:process { getsched setsched };
 allow hal_power_default self:capability sys_nice;
 
 # Set scheduling info for system_server (for adpf)
 allow hal_power_default system_server:process setsched;
+
+# Set cpu freqs
+allow hal_power_default sysfs_mtk_cpufreq:file rw_file_perms;
+
+# Set gpu freqs
+allow hal_power_default sysfs_mtk_gpufreq:file rw_file_perms;
+
+# Set perfmgr nodes
+allow hal_power_default proc_perfmgr:dir r_dir_perms;
+allow hal_power_default proc_perfmgr:file rw_file_perms;
+allow hal_power_default sysfs_fpsgo:file w_file_perms;
+allow hal_power_default proc_ppm:dir r_dir_perms;
+allow hal_power_default proc_ppm:file rw_file_perms;
+allow hal_power_default proc_cpufreq:dir r_dir_perms;
+allow hal_power_default proc_cpufreq:file rw_file_perms;
+allow hal_power_default proc_hps:dir r_dir_perms;
+allow hal_power_default proc_hps:file rw_file_perms;
+allow hal_power_default proc_cm_mgr:dir r_dir_perms;
+allow hal_power_default proc_cm_mgr:file rw_file_perms;
+allow hal_power_default proc_fliperfs:dir r_dir_perms;
+allow hal_power_default proc_fliperfs:file rw_file_perms;
+allow hal_power_default sysfs_fbt_cpu:dir r_dir_perms;
+allow hal_power_default sysfs_fbt_cpu:file rw_file_perms;
+allow hal_power_default sysfs_fbt_fteh:dir r_dir_perms;
+allow hal_power_default sysfs_fbt_fteh:file rw_file_perms;
 
 # Set DT2W state
 allow hal_power_default sysfs_dt2w:file rw_file_perms;
