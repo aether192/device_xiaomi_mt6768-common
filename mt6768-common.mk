@@ -103,8 +103,12 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
 
-# Inherit hardware specific packages
-$(call inherit-product, hardware/mediatek/mediatek.mk)
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    $(COMMON_PATH) \
+    hardware/xiaomi \
+    hardware/google/interfaces \
+    hardware/google/pixel
 
 # IR
 PRODUCT_PACKAGES += \
@@ -189,7 +193,7 @@ PRODUCT_PACKAGES += \
 vendor.mediatek.hardware.mtkpower@1.2-service.stub \
 vendor.mediatek.hardware.mtkpower@1.1.vendor \
     vendor.mediatek.hardware.mtkpower@1.0.vendor \
-    android.hardware.power-service.mediatek-libperfmgr \
+    android.hardware.power-service.xiaomi-libperfmgr \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
