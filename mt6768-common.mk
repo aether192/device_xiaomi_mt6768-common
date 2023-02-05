@@ -184,6 +184,8 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
 vendor.mediatek.hardware.mtkpower@1.2-service.stub \
+vendor.mediatek.hardware.mtkpower@1.1.vendor \
+    vendor.mediatek.hardware.mtkpower@1.0.vendor \
     android.hardware.power-service.mediatek-libperfmgr \
 
 PRODUCT_COPY_FILES += \
