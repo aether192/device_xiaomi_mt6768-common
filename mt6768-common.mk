@@ -103,6 +103,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
 
+# Inherit hardware specific packages
+$(call inherit-product, hardware/mediatek/mediatek.mk)
+
 # IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
