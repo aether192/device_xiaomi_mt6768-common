@@ -186,6 +186,9 @@ PRODUCT_PACKAGES += \
 vendor.mediatek.hardware.mtkpower@1.2-service.stub \
     android.hardware.power-service.mediatek-libperfmgr \
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
